@@ -420,7 +420,7 @@ if (!isset($test)) {
     $test['disableAVIF'] = isset($_REQUEST['disableAVIF']) && $_REQUEST['disableAVIF'] ? 1 : 0;
     $test['disableWEBP'] = isset($_REQUEST['disableWEBP']) && $_REQUEST['disableWEBP'] ? 1 : 0;
     $test['disableJXL'] = isset($_REQUEST['disableJXL']) && $_REQUEST['disableJXL'] ? 1 : 0;
-    $test['dtShaper'] = isset($_REQUEST['dtShaper']) && $_REQUEST['dtShaper'] ? 1 : 0;
+    $test['dtShaper'] = 1; # isset($_REQUEST['dtShaper']) && $_REQUEST['dtShaper'] ? 1 : 0;
     $test['axe'] = isset($_REQUEST['axe']) && $_REQUEST['axe'] ? 1 : 0;
     if (isset($_REQUEST['warmup']) && $_REQUEST['warmup'] > 0) {
         $test['warmup'] = min(intval($_REQUEST['warmup']), 3);
@@ -3555,7 +3555,7 @@ function CheckRateLimit($test, &$error, &$errorTitle)
 
     $errorTemplate = "<p>Don't worry! You can keep testing for free once you log in, which will give you access to other excellent features like:</p>";
     $errorTitleTemplate = "You've reached the limit for";
-   
+
     if (!$passesMonthly) {
         $errorTitle = "{$errorTitleTemplate} this month";
         $error = $errorTemplate;
