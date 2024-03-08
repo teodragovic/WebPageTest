@@ -1,3 +1,8 @@
+This is working setup for running WPT locally on Windows 10 via Docker and Chrome.
+Must disable traffic-shapping (see [here](./docker/local/README.md#running-web-tests-results-in-bad-results))
+
+---
+
 # WebPageTest
 
 This is the official repository for the performance-testing code that runs at [webpagetest.org](https://www.webpagetest.org).
@@ -42,8 +47,8 @@ Before you send a pull request please make sure to run: `composer lint && compos
 
 Alternatively you can run
 
- - `composer lint:php && composer format:php` if you only touched PHP code, or
- - `composer lint:css && composer format:prettier` if you only touched CSS or JavaScript code
+- `composer lint:php && composer format:php` if you only touched PHP code, or
+- `composer lint:css && composer format:prettier` if you only touched CSS or JavaScript code
 
 ### VSCode integration
 
